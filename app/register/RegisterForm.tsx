@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 
-export default function LoginForm() {
+export default function RegisterForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function handleLogin() {
-        console.log("Logging in...");
+    function handleSubmit() {
+        console.log("Registering...");
 
         console.log("Email: ", email);
         console.log("Password: ", password);
@@ -16,7 +16,7 @@ export default function LoginForm() {
             className="flex flex-col max-w-80"
             onSubmit={(e) => {
                 e.preventDefault();
-                handleLogin();
+                handleSubmit();
             }}
         >
             <label htmlFor="email" className="pe-2">
@@ -47,7 +47,7 @@ export default function LoginForm() {
                 className="border border-lime-300 rounded-lg bg-lime-300 hover:bg-lime-500  active:bg-lime-200 shadow-lg ps-2 my-4"
                 type="submit"
             >
-                Log in
+                Register
             </button>
         </form>
     );
